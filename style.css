@@ -19,6 +19,7 @@ html { scroll-behavior: smooth; }
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f8f8f4;
     color: white;
+    max-width: 100vw;
     overflow-x: hidden;
   }
   
