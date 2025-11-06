@@ -1155,8 +1155,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     }
     /* Over Ons carousel mobiel: centreren en passende hoogte */
     .over-ons-carousel .carousel-container {
-      width: 100vw; /* volledige schermbreedte op mobiel */
-      max-width: 100vw;
+      width: 100%; /* volledige schermbreedte op mobiel */
       position: relative;
       left: 50%;
       transform: translateX(-50%);
