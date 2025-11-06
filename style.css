@@ -13,7 +13,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-html { scroll-behavior: smooth; }
+html, body { width: 100%; } /* Zorgt ervoor dat html en body altijd de volledige breedte innemen */
+html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
   
   body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -1240,7 +1241,7 @@ html { scroll-behavior: smooth; }
       align-items: center;
       justify-content: center;
       position: relative;
-      max-width: 350px;
+      /* max-width: 350px; verwijderd om schaling met de viewport mogelijk te maken */
       margin: 0 auto;
       padding: 0 20px;
     }
