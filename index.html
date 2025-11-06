@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Center Mario</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="afbeeldingen/logo.png" alt="Auto Center Mario logo" />
+        <h1>AUTO CENTER MARIO</h1>
+      </div>
+
+      <nav class="nav" id="nav-menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#over-ons">OVER ONS</a></li>
+          <li><a href="#werkwijze">WERKWIJZE</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Auto Center Mario</h2>
+      <p class="subtitle">Voor al uw automotive behoeften</p>
+      <p class="desc">Hier komt een korte beschrijving van wat wij doen.</p>
+      <a href="#" class="btn">Neem contact op</a>
+    </div>
+  </section>
+
+    <!-- OVER ONS SECTION -->
+    <section class="over-ons" id="over-ons">
+        <div class="container over-ons-content">
+          <div class="over-ons-image">
+            <!-- Desktop Carousel -->
+            <div class="over-ons-carousel">
+              <div class="carousel-container">
+                <div class="carousel-track" id="overOnsCarouselTrack">
+                  <!-- Slide 1 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel1.png" alt="Over ons afbeelding 1">
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel2.png" alt="Over ons afbeelding 2">
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel3.png" alt="Over ons afbeelding 3">
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel4.png" alt="Over ons afbeelding 4">
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel5.png" alt="Over ons afbeelding 5">
+                  </div>
+                  <!-- Slide 6 -->
+                  <div class="carousel-slide">
+                    <img src="afbeeldingen/carrousel6.png" alt="Over ons afbeelding 6">
+                  </div>
+                </div>
+
+                <div class="carousel-controls">
+                  <button class="carousel-btn prev-btn" id="overOnsPrevBtn">‹</button>
+                  <button class="carousel-btn next-btn" id="overOnsNextBtn">›</button>
+                </div>
+              </div>
+
+              <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+                <span class="indicator" data-slide="5"></span>
+              </div>
+            </div>
+          </div>
+          <div class="over-ons-text">
+            <h2>Over ons</h2>
+            
+            <div class="text-section">
+              <h3>Historiek van het bedrijf</h3>
+              <p>
+                Auto Center Mario BV heeft inmiddels meer dan 18 jaar ervaring in de autosector. Al die jaren
+                hebben wij onze reputatie opgebouwd dankzij een ervaren en professionele aanpak die onze klanten
+                waarderen. Vanaf de opstart van het bedrijf stond klanttevredenheid centraal, en dat principe vormt
+                nog steeds de basis van onze werking.
+              </p>
+              <p>
+                Door onze focus op service en betrouwbaarheid is de zaakvoerder al 18 jaar actief in de sector, met
+                een uitgebreid netwerk van tevreden klanten die ook vandaag nog in contact blijven met ons bedrijf.
+              </p>
+            </div>
+
+            <div class="text-section">
+              <h3>Ons aanbod</h3>
+              <p>
+                Auto Center Mario BV is gevestigd in Wuustwezel, waar wij alle wagens stockeren voor
+                exportverkoop. Wat ons onderscheidt, is onze mogelijkheid om het volledige beheer van uw
+                wagenpark over te nemen, inclusief de volledige opkoop ervan.
+            </p>
+            <p>
+                Voor grotere ondernemingen werken wij met meerjarige afspraken om de geplande opkoop van hun
+                wagenpark te garanderen. Uiteraard is de prijs die wij bieden belangrijk, en deze is steeds
+                marktconform. Toch denken wij in de eerste plaats aan het belang van de klant: wij handelen snel,
+                correct en transparant, wat door veel bedrijven als een groot voordeel wordt ervaren bij de
+                samenwerking met ons.
+              </p>
+            </div>
+            
+            <a href="#contact" class="btn-dark">Neem contact op</a>
+          </div>
+        </div>
+      </section>
+
+<!-- ONZE WERKWĲZE SECTION -->
+<section class="werkwijze" id="werkwijze">
+  <div class="container">
+    <h2 class="werkwijze-title">Onze werkwijze</h2>
+
+    <!-- Desktop Grid -->
+    <div class="werkwijze-grid">
+      <!-- Stap 1 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-phone"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 1: Eerste contact en afspraak</h3>
+          <p>We nemen contact op met de klant om een afspraak te maken op een moment dat het best past. Hierbij bespreken we kort de algemene informatie over het voertuig.</p>
+        </div>
+      </div>
+
+      <!-- Stap 2 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-inspect"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 2: Inspectie ter plaatse</h3>
+          <p>Wij komen persoonlijk bij de klant langs voor een volledige inspectie van de wagen. Zo kunnen we een correcte inschatting maken van de staat en waarde van het voertuig.</p>
+        </div>
+      </div>
+
+      <!-- Stap 3 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-money"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 3: Marktconform prijsvoorstel</h3>
+          <p>Na de inspectie doen wij een realistisch en marktconform bod. Hierbij houden we rekening met de actuele marktwaarde en de specifieke kenmerken van de wagen.</p>
+        </div>
+      </div>
+
+      <!-- Stap 4 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-contract"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 4: Overeenkomst en verkoopcontract</h3>
+          <p>Wanneer beide partijen akkoord gaan met het voorstel, wordt er een verkoopcontract of verkoopfactuur opgesteld tussen de klant en Auto Center Mario BV. Dit gebeurt steeds op een transparante en duidelijke manier.</p>
+        </div>
+      </div>
+
+      <!-- Stap 5 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-payment"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 5: Directe betaling</h3>
+          <p>Wij werken met instant bankbetalingen, wat betekent dat het bedrag onmiddellijk op de rekening van de klant verschijnt. Zo verloopt de verkoop snel en veilig.</p>
+        </div>
+      </div>
+
+      <!-- Stap 6 -->
+      <div class="werkwijze-step">
+        <div class="step-icon">
+          <div class="icon-placeholder">
+            <div class="icon-satisfaction"></div>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Stap 6: Ophaling van het voertuig</h3>
+          <p>Zodra de betaling bevestigd is, halen wij de wagen meteen op. Alles wordt vlot en zonder zorgen afgehandeld — de klant hoeft niets meer te doen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Carousel -->
+    <div class="werkwijze-carousel">
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+
+          <!-- Stap 1 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-phone"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 1: Eerste contact en afspraak</h3>
+              <p>We nemen contact op met de klant om een afspraak te maken op een moment dat het best past. Hierbij bespreken we kort de algemene informatie over het voertuig.</p>
+            </div>
+          </div>
+
+          <!-- Stap 2 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-inspect"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 2: Inspectie ter plaatse</h3>
+              <p>Wij komen persoonlijk bij de klant langs voor een volledige inspectie van de wagen. Zo kunnen we een correcte inschatting maken van de staat en waarde van het voertuig.</p>
+            </div>
+          </div>
+
+          <!-- Stap 3 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-money"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 3: Marktconform prijsvoorstel</h3>
+              <p>Na de inspectie doen wij een realistisch en marktconform bod. Hierbij houden we rekening met de actuele marktwaarde en de specifieke kenmerken van de wagen.</p>
+            </div>
+          </div>
+
+          <!-- Stap 4 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-contract"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 4: Overeenkomst en verkoopcontract</h3>
+              <p>Wanneer beide partijen akkoord gaan met het voorstel, wordt er een verkoopcontract of verkoopfactuur opgesteld tussen de klant en Auto Center Mario BV. Dit gebeurt steeds op een transparante en duidelijke manier.</p>
+            </div>
+          </div>
+
+          <!-- Stap 5 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-payment"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 5: Directe betaling</h3>
+              <p>Wij werken met instant bankbetalingen, wat betekent dat het bedrag onmiddellijk op de rekening van de klant verschijnt. Zo verloopt de verkoop snel en veilig.</p>
+            </div>
+          </div>
+
+          <!-- Stap 6 -->
+          <div class="carousel-slide">
+            <div class="step-icon"><div class="icon-placeholder"><div class="icon-satisfaction"></div></div></div>
+            <div class="step-content">
+              <h3>Stap 6: Ophaling van het voertuig</h3>
+              <p>Zodra de betaling bevestigd is, halen wij de wagen meteen op. Alles wordt vlot en zonder zorgen afgehandeld — de klant hoeft niets meer te doen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn prev-btn" id="prevBtn">‹</button>
+          <button class="carousel-btn next-btn" id="nextBtn">›</button>
+        </div>
+      </div>
+
+      <div class="carousel-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+        <span class="indicator" data-slide="4"></span>
+        <span class="indicator" data-slide="5"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- CONTACT SECTION -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="contact-title">Contact</h2>
+          
+          <div class="contact-content">
+            <!-- Linker kolom: Contact Informatie + Maps -->
+            <div class="contact-left">
+              <!-- Contact Informatie -->
+              <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h3>Adres</h3>
+                  <p>Straatnaam 123<br>1234 AB Stad</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h3>Telefoon</h3>
+                  <p><a href="tel:+31123456789">+31 123 456 789</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h3>E-mail</h3>
+                  <p><a href="mailto:EMAILNOGAANPASSEN@">EMAILNOGAANPASSEN@</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h3>Bedrijfsgegevens</h3>
+                  <p><a href="gegevens.html">Klik hier om onze gegevens te bekijken</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="contact-map">
+              <h3>Onze locatie</h3>
+              <div class="map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.123456789!2d4.123456789!3d52.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAuto%20Center%20Mario!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl" 
+                  width="100%" 
+                  height="300" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+            </div>
+
+            <!-- Rechter kolom: Contact Formulier -->
+            <div class="contact-right">
+              <!-- Contact Formulier -->
+              <div class="contact-form">
+              <h3>Stuur ons een bericht</h3>
+              <form id="contactForm">
+                <div class="form-fields">
+                  <div class="form-group">
+                    <label for="name">Naam *</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Telefoon</label>
+                    <input type="tel" id="phone" name="phone">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject">Onderwerp *</label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Selecteer een onderwerp</option>
+                      <option value="onderhoud">Onderhoud</option>
+                      <option value="reparatie">Reparatie</option>
+                      <option value="offerte">Offerte aanvraag</option>
+                      <option value="algemeen">Algemene vraag</option>
+                      <option value="klacht">Klacht</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Bericht *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Vertel ons hoe we je kunnen helpen..."></textarea>
+                  </div>
+
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Ik ga akkoord met de <a href="#" target="_blank">privacyverklaring</a> *</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Verstuur bericht</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
+
+  <script>
+    // Hamburger menu functionaliteit
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Carousel functionaliteit voor werkwijze
+    let currentSlide = 0;
+    const totalSlides = 6;
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function updateCarousel() {
+      if (carouselTrack) {
+        const translateX = -currentSlide * 100;
+        carouselTrack.style.transform = `translateX(${translateX}%)`;
+        console.log(`Moving to slide ${currentSlide + 1}, translateX: ${translateX}%`);
+      }
+
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      console.log(`Next slide: ${currentSlide + 1}`);
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      console.log(`Previous slide: ${currentSlide + 1}`);
+      updateCarousel();
+    }
+
+    // Event listeners voor werkwijze carousel
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        nextSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        prevSlide();
+      });
+    }
+
+    // Indicator clicks voor werkwijze
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentSlide = index;
+        console.log(`Clicked indicator ${index + 1}`);
+        updateCarousel();
+      });
+    });
+
+    // Initialize werkwijze carousel
+    if (carouselTrack) {
+      updateCarousel();
+    }
+
+    // Touch/swipe support voor werkwijze
+    let startX = 0;
+    let endX = 0;
+    const carouselContainer = document.querySelector('.carousel-container');
+
+    if (carouselContainer) {
+      carouselContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      carouselContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const threshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            nextSlide(); // Swipe left - next slide
+          } else {
+            prevSlide(); // Swipe right - previous slide
+          }
+        }
+      }
+    }
+
+    // Over Ons Carousel functionaliteit
+    let overOnsCurrentSlide = 0;
+    const overOnsTotalSlides = 6;
+    const overOnsCarouselTrack = document.getElementById('overOnsCarouselTrack');
+    const overOnsPrevBtn = document.getElementById('overOnsPrevBtn');
+    const overOnsNextBtn = document.getElementById('overOnsNextBtn');
+    const overOnsIndicators = document.querySelectorAll('.over-ons-carousel .indicator');
+
+    function updateOverOnsCarousel() {
+      if (overOnsCarouselTrack) {
+        const translateX = -overOnsCurrentSlide * 100;
+        overOnsCarouselTrack.style.transform = `translateX(${translateX}%)`;
+        console.log(`Over Ons: Moving to slide ${overOnsCurrentSlide + 1}, translateX: ${translateX}%`);
+      }
+
+      // Update indicators
+      overOnsIndicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === overOnsCurrentSlide);
+      });
+    }
+
+    function overOnsNextSlide() {
+      overOnsCurrentSlide = (overOnsCurrentSlide + 1) % overOnsTotalSlides;
+      console.log(`Over Ons: Next slide: ${overOnsCurrentSlide + 1}`);
+      updateOverOnsCarousel();
+    }
+
+    function overOnsPrevSlide() {
+      overOnsCurrentSlide = (overOnsCurrentSlide - 1 + overOnsTotalSlides) % overOnsTotalSlides;
+      console.log(`Over Ons: Previous slide: ${overOnsCurrentSlide + 1}`);
+      updateOverOnsCarousel();
+    }
+
+    // Event listeners voor over ons carousel
+    if (overOnsNextBtn) {
+      overOnsNextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overOnsNextSlide();
+      });
+    }
+
+    if (overOnsPrevBtn) {
+      overOnsPrevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overOnsPrevSlide();
+      });
+    }
+
+    // Indicator clicks voor over ons
+    overOnsIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        overOnsCurrentSlide = index;
+        console.log(`Over Ons: Clicked indicator ${index + 1}`);
+        updateOverOnsCarousel();
+      });
+    });
+
+    // Initialize over ons carousel
+    if (overOnsCarouselTrack) {
+      updateOverOnsCarousel();
+    }
+
+    // Touch/swipe support voor over ons
+    const overOnsCarouselContainer = document.querySelector('.over-ons-carousel .carousel-container');
+    let overOnsStartX = 0;
+    let overOnsEndX = 0;
+
+    if (overOnsCarouselContainer) {
+      overOnsCarouselContainer.addEventListener('touchstart', (e) => {
+        overOnsStartX = e.touches[0].clientX;
+      });
+
+      overOnsCarouselContainer.addEventListener('touchend', (e) => {
+        overOnsEndX = e.changedTouches[0].clientX;
+        handleOverOnsSwipe();
+      });
+
+      function handleOverOnsSwipe() {
+        const threshold = 50;
+        const diff = overOnsStartX - overOnsEndX;
+
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            overOnsNextSlide(); // Swipe left - next slide
+          } else {
+            overOnsPrevSlide(); // Swipe right - previous slide
+          }
+        }
+      }
+    }
+
+    // Debug: Log carousel elements
+    console.log('Werkwijze Carousel elements found:');
+    console.log('carouselTrack:', carouselTrack);
+    console.log('prevBtn:', prevBtn);
+    console.log('nextBtn:', nextBtn);
+    console.log('indicators:', indicators);
+    console.log('totalSlides:', totalSlides);
+
+    console.log('Over Ons Carousel elements found:');
+    console.log('overOnsCarouselTrack:', overOnsCarouselTrack);
+    console.log('overOnsPrevBtn:', overOnsPrevBtn);
+    console.log('overOnsNextBtn:', overOnsNextBtn);
+    console.log('overOnsIndicators:', overOnsIndicators);
+    console.log('overOnsTotalSlides:', overOnsTotalSlides);
+
+    // Contact form functionaliteit
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Verzamel formulier data
+        const formData = new FormData(contactForm);
+        const data = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+          privacy: formData.get('privacy')
+        };
+
+        // Simpele validatie
+        if (!data.name || !data.email || !data.subject || !data.message || !data.privacy) {
+          alert('Vul alle verplichte velden in.');
+          return;
+        }
+
+        // Email validatie
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+          alert('Voer een geldig e-mailadres in.');
+          return;
+        }
+
+        // Simuleer formulier verzending
+        console.log('Formulier verzonden:', data);
+        alert('Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.');
+
+        // Reset formulier
+        contactForm.reset();
+      });
+    }
+  </script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p class="footer-company">© <span id="jaar"></span> [Bedrijfsnaam]</p>
+      <p>BTW: BE 0123.456.789</p>
+      <p>Adres: [Straatnaam 1, 1000 Brussel]</p>
+      <p>Contact: <a href="mailto:EMAILNOGAANPASSEN@">EMAILNOGAANPASSEN@</a></p>
+    </div>
+
+    <div class="footer-right">
+      <a href="privacy.html">Privacyverklaring</a>
+      <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("jaar").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>

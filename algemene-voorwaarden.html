@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algemene Voorwaarden | Auto Center Mario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="afbeeldingen/logo.png" alt="Auto Center Mario logo" />
+        <h1>AUTO CENTER MARIO</h1>
+      </div>
+
+      <nav class="nav" id="nav-menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#over-ons">OVER ONS</a></li>
+          <li><a href="index.html#werkwijze">WERKWIJZE</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <h1>Algemene Voorwaarden</h1>
+    <p>Deze voorwaarden zijn van toepassing op alle diensten en producten aangeboden door Auto Center Mario BV. Door gebruik te maken van onze diensten, gaat u akkoord met deze voorwaarden.</p>
+
+    <section>
+      <h2>1. Bedrijfsgegevens</h2>
+      <p>Auto Center Mario BV<br>
+      Adres: Wuustwezel, België<br>
+      BTW: BE 0123.456.789<br>
+      E-mail: <a href="mailto:info@autocentermario.be">info@autocentermario.be</a><br>
+      Telefoon: <a href="tel:+31123456789">+31 123 456 789</a></p>
+    </section>
+
+    <section>
+      <h2>2. Toepasselijkheid</h2>
+      <p>Deze voorwaarden zijn van toepassing op iedere overeenkomst tussen Auto Center Mario BV en haar klanten, tenzij schriftelijk anders overeengekomen.</p>
+    </section>
+
+    <section>
+      <h2>3. Prijzen en betaling</h2>
+      <p>Prijzen zijn exclusief BTW (21% in België). Betaling binnen 14 dagen na factuurdatum. Bij laattijdige betaling: 8% nalatigheidsinterest per jaar + 40€ administratieve kosten.</p>
+    </section>
+
+    <section>
+      <h2>4. Eigendomsvoorbehoud</h2>
+      <p>Auto Center Mario BV behoudt eigendom van voertuigen tot volledige betaling.</p>
+    </section>
+
+    <section>
+      <h2>5. Levering en risico</h2>
+      <p>Het risico van verlies of schade gaat over op de klant bij aflevering van het voertuig.</p>
+    </section>
+
+    <section>
+      <h2>6. Garantie</h2>
+      <p>Auto Center Mario BV levert voertuigen conform de Belgische wettelijke garantie.</p>
+    </section>
+
+    <section>
+      <h2>7. Aansprakelijkheid</h2>
+      <p>Onze aansprakelijkheid is beperkt tot directe schade en maximaal het factuurbedrag van de transactie, voor zover toegestaan door de wet. Geen aansprakelijkheid voor indirecte schade.</p>
+    </section>
+
+    <section>
+      <h2>8. Toepasselijk recht en forum</h2>
+      <p>Belgisch recht van toepassing. Geschillen worden beslecht door de rechtbank van het arrondissement Antwerpen.</p>
+    </section>
+
+    <section>
+      <h2>9. Wijzigingen van de voorwaarden</h2>
+      <p>Wij behouden ons het recht voor deze voorwaarden te wijzigen. De meest recente versie is te allen tijde beschikbaar op onze website.</p>
+    </section>
+
+    <p class="last-updated">Laatste update: 27 oktober 2025</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-company">© <span id="jaar"></span> Auto Center Mario BV</p>
+        <p>BTW: BE 0123.456.789</p>
+        <p>Adres: Wuustwezel, België</p>
+        <p>Contact: <a href="mailto:info@autocentermario.be">info@autocentermario.be</a></p>
+      </div>
+
+      <div class="footer-right">
+        <a href="privacy.html">Privacyverklaring</a>
+        <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("jaar").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <script>
+    // Hamburger menu functionaliteit
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
