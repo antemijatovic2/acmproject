@@ -1157,6 +1157,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     .over-ons-carousel .carousel-container {
       width: 100%; /* volledige schermbreedte op mobiel */
       position: relative;
+      max-width: 95vw; /* Zorgt ervoor dat de carousel bijna de volledige breedte inneemt */
       padding-bottom: 52px; /* iets minder ruimte onderaan voor pijlen */
     }
 
