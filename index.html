@@ -335,11 +335,13 @@
       <section class="contact" id="contact">
         <div class="container">
           <h2 class="contact-title">Contact</h2>
+          <h2 class="contact-title-mobile">Onze contactgegevens</h2>
           
           <div class="contact-content">
             <!-- Linker kolom: Contact Informatie + Maps -->
             <div class="contact-left">
               <!-- Contact Informatie -->
+              <h2 class="contact-title-mobile-inline">Onze contactgegevens</h2>
               <div class="contact-info">
               <a href="https://www.google.com/maps?q=Kalmthoutsesteenweg+201a,+2990+Wuustwezel" target="_blank" rel="noopener noreferrer" class="contact-item contact-item-link">
                 <div class="contact-icon">
@@ -493,10 +495,39 @@
       navMenu.classList.toggle('active');
     });
 
-    // Sluit hamburgermenu na klik op een link (mobiel)
-    const navLinks = document.querySelectorAll('#nav-menu a');
+    // Sluit hamburgermenu na klik op een link (mobiel) en pas scroll offset aan
+    const navLinks = document.querySelectorAll('#nav-menu a[href^="#"]');
     navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href !== '#') {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Bereken offset voor fixed header (meer op mobile)
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const isMobile = window.innerWidth <= 768;
+            
+            // Aangepaste offset voor "over-ons" sectie op mobile (minder offset = lager scrollen)
+            let offset;
+            if (isMobile && targetId === 'over-ons') {
+              offset = headerHeight - 10; // Minder offset, scrollt lager
+            } else {
+              offset = isMobile ? headerHeight + 20 : headerHeight + 10;
+            }
+            
+            const targetPosition = targetElement.offsetTop - offset;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+        
+        // Sluit hamburgermenu
         if (hamburger.classList.contains('active')) {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');

@@ -800,6 +800,14 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     display: none; /* Verberg titel op desktop */
   }
 
+  .contact-title-mobile {
+    display: none; /* Verberg op desktop */
+  }
+
+  .contact-title-mobile-inline {
+    display: none; /* Verberg op desktop */
+  }
+
   /* Verberg contact titel op mobiel */
   @media (max-width: 768px) {
     /* Zorg dat Over Ons slides geen padding/background/border hebben op mobiel */
@@ -1569,6 +1577,20 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
 
     .contact-title {
       display: none; /* Verberg titel op mobiel */
+    }
+
+    .contact-title-mobile {
+      display: none; /* Verberg de titel in de container */
+    }
+
+    .contact-title-mobile-inline {
+      display: block; /* Toon titel boven contactgegevens op mobiel */
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #222;
+      width: 100%;
     }
 
     .contact-content {
