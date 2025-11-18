@@ -912,6 +912,11 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
   .contact-item-half-link p {
     margin: 0;
   }
+
+  /* WhatsApp tekst iets omhoog */
+  .contact-item-half-link:last-of-type {
+    margin-top: -4px;
+  }
   
   .contact-icons-column {
     display: flex;
@@ -977,6 +982,11 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     margin-top: -4px;
   }
 
+  /* WhatsApp tekst iets omhoog */
+  .contact-item:has(.contact-icons-column) .contact-details p:last-of-type {
+    margin-top: -2px;
+  }
+
   .contact-details a {
     color: #333;
     text-decoration: none;
@@ -998,7 +1008,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     align-items: center;
     justify-content: center;
     color: white;
-    margin-top: 8px; /* Iets omlaag voor betere uitlijning met tekst */
+    margin-top: 24px; /* Meer omlaag voor betere uitlijning met tekst */
   }
   
   .contact-subicon svg {
@@ -1029,7 +1039,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     }
     
     .contact-subicon {
-      margin-top: 6px; /* Aangepast voor mobiel */
+      margin-top: 28px; /* Iets hoger op mobiel */
     }
     
     .contact-subicon svg {
