@@ -272,7 +272,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
 
   .over-ons-carousel .carousel-btn {
     position: static;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     border: none;
     width: 40px;
@@ -280,16 +280,21 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
     margin: 0 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    backdrop-filter: blur(4px);
   }
 
   .over-ons-carousel .carousel-btn:hover {
     background: rgba(0, 0, 0, 0.9);
-  }
-
-  .over-ons-carousel .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 1px 0 rgba(255, 255, 255, 0.3) inset,
+                0 0 20px rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
   }
 
   .over-ons-carousel .carousel-indicators {
@@ -854,8 +859,66 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     transition: transform 0.3s ease;
   }
 
+  /* Specifieke uitlijning voor telefoon item met WhatsApp */
+  .contact-item:has(.contact-icons-column) {
+    align-items: flex-start;
+  }
+
   .contact-item:hover {
     transform: translateY(-5px);
+  }
+
+  /* Klikbare contact item (hele box is link) */
+  .contact-item-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .contact-item-link:hover {
+    text-decoration: none;
+  }
+
+  .contact-item-link .contact-details a {
+    pointer-events: none; /* Voorkom dubbele links */
+  }
+
+  /* Half-half klikbare delen binnen contact item */
+  .contact-item-half-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 8px;
+    margin: -8px;
+    border-radius: 8px;
+  }
+
+  .contact-item-half-link:hover {
+    background-color: #f5f5f5;
+    text-decoration: none;
+  }
+
+  .contact-item-half-link:first-of-type {
+    margin-bottom: 4px;
+  }
+
+  .contact-item-half-link h3 {
+    margin-bottom: 4px;
+  }
+
+  .contact-item-half-link p {
+    margin: 0;
+  }
+  
+  .contact-icons-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+    align-items: flex-start;
   }
 
   .contact-icon {
@@ -870,6 +933,12 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     color: white;
   }
 
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .contact-details h3 {
     font-size: 20px;
     font-weight: 700;
@@ -881,6 +950,31 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     font-size: 16px;
     color: #555;
     line-height: 1.5;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Uitlijning voor paragrafen die naast iconen staan - precies in het midden */
+  .contact-item:has(.contact-icons-column) .contact-details {
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  .contact-item:has(.contact-icons-column) .contact-details h3 {
+    margin-bottom: 4px;
+  }
+
+  .contact-item:has(.contact-icons-column) .contact-details p {
+    height: 50px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* Telefoonnummer iets omhoog */
+  .contact-item:has(.contact-icons-column) .contact-details p:first-of-type {
+    margin-top: -4px;
   }
 
   .contact-details a {
@@ -894,36 +988,68 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
   }
 
   /* Subitem styling binnen contact-item (WhatsApp onder Telefoon) */
-  .contact-subitem {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 8px;
-    position: relative;
-  }
   .contact-subicon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background: #25D366;
+    width: 50px;
+    height: 50px;
+    background: #333;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    margin-left: -70px; /* zet icoon exact onder hoofd-icoon (50 + 20 gap) */
+    color: white;
+    margin-top: 8px; /* Iets omlaag voor betere uitlijning met tekst */
   }
-  .contact-subicon svg { width: 20px; height: 20px; display: block; }
+  
+  .contact-subicon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
   .whats-inline {
-    color: #25D366;
-    font-weight: 600;
+    color: #333;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
-  .whats-inline:hover { opacity: 0.9; }
+  
+  .whats-inline:hover {
+    color: #666;
+  }
 
   @media (max-width: 768px) {
-    /* op mobiel zijn iconen 40px en gap 15px */
-    .contact-subicon { margin-left: -55px; }
+    .contact-icons-column {
+      gap: 10px;
+    }
+    
+    .contact-icon,
+    .contact-subicon {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .contact-subicon {
+      margin-top: 6px; /* Aangepast voor mobiel */
+    }
+    
+    .contact-subicon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Mobiele uitlijning voor paragrafen */
+    .contact-item:has(.contact-icons-column) .contact-details p {
+      height: 40px; /* Aangepast voor kleinere iconen op mobiel */
+    }
+
+    /* Telefoonnummer en WhatsApp tekst iets omhoog op mobiel */
+    .contact-item:has(.contact-icons-column) .contact-details p:first-of-type {
+      margin-top: -6px;
+    }
+
+    .contact-item:has(.contact-icons-column) .contact-details p:last-of-type {
+      margin-top: -2px;
+    }
   }
 
   .contact-map {
@@ -1066,29 +1192,55 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
   }
   
   /* ====== RESPONSIVE ====== */
-  @media (max-width: 992px) {
+  /* Vanaf 1350px: layout zoals mobile - tekst boven, carrousel onder */
+  @media (max-width: 1350px) {
     .over-ons-content {
+      flex-direction: column;
       gap: 40px;
+    }
+
+    .over-ons-image {
+      order: 2;
+      flex: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .over-ons-text {
+      order: 1;
+      padding: 0 20px;
+      width: 100%;
     }
 
     .over-ons-text h2 {
       font-size: 32px;
       margin-bottom: 25px;
+      text-align: center;
     }
 
     .text-section h3 {
       font-size: 20px;
       margin-bottom: 12px;
+      text-align: center;
     }
 
     .text-section p {
       font-size: 15px;
       line-height: 1.6;
+      text-align: left;
     }
 
     .text-section {
       margin-bottom: 25px;
     }
+
+    /* Tablet: carrousel met viewport height voor betere schaling */
+    .over-ons-carousel .carousel-container::before {
+      padding-top: 65vh; /* Gebruik viewport height voor betere schaling */
+    }
+  }
+
+  @media (max-width: 992px) {
 
     /* Werkwijze responsive voor tablets */
     .werkwijze-grid {
@@ -1143,22 +1295,53 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     }
   }
   
+  /* Medium tablets - tussen 900px en 768px - geleidelijke overgang */
+  @media (max-width: 900px) {
+    .over-ons-carousel .carousel-container::before {
+      padding-top: 68vh;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .over-ons-carousel .carousel-container::before {
+      padding-top: 69vh;
+    }
+  }
+
   @media (max-width: 768px) {
     /* Hero kleinere hoogte en betere focus op mobiel */
     .hero {
       height: 100vh;
       height: 100svh; /* moderne viewport unit voor mobiel */
-      background-position: center top;
+      background: url('afbeeldingen/mobilebackground.png') no-repeat center center/cover;
     }
     .over-ons-content {
       flex-direction: column;
     }
-    /* Over Ons carousel mobiel: centreren en passende hoogte */
+    
+    /* Over Ons carousel mobiel: grote breedte en hoogte met ronde afwerking */
+    .over-ons-image {
+      order: 2;
+      flex: none;
+      width: 100%;
+      padding: 0 20px; /* padding aan de zijkanten */
+    }
+    
+    .over-ons-carousel {
+      width: 100%;
+    }
+    
     .over-ons-carousel .carousel-container {
-      width: 100%; /* volledige schermbreedte op mobiel */
+      width: 100%;
       position: relative;
-      max-width: 95vw; /* Zorgt ervoor dat de carousel bijna de volledige breedte inneemt */
-      padding-bottom: 52px; /* iets minder ruimte onderaan voor pijlen */
+      max-width: 100%;
+      padding-bottom: 52px; /* ruimte onderaan voor pijlen */
+      border-radius: 15px; /* ronde afwerking zoals rest van site */
+    }
+    
+    /* Grotere hoogte op mobiel voor betere foto weergave */
+    .over-ons-carousel .carousel-container::before {
+      padding-top: 70vh; /* gebruik viewport height voor grote foto's op mobiel */
     }
 
     .over-ons-carousel .carousel-btn {
@@ -1170,12 +1353,10 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     .over-ons-carousel .prev-btn { left: 8px; }
     .over-ons-carousel .next-btn { right: 8px; }
 
-    .over-ons-image {
-      order: 2;
-    }
-
     .over-ons-text {
       order: 1;
+      padding: 0 20px; /* padding consistent met carousel */
+      width: 100%;
     }
 
     .over-ons-text h2 {
@@ -1276,7 +1457,7 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
 
     .carousel-btn {
       position: static;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.75);
       color: white;
       border: none;
       width: 40px;
@@ -1284,12 +1465,21 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
       border-radius: 50%;
       font-size: 20px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
       margin: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                  0 1px 0 rgba(255, 255, 255, 0.2) inset;
+      backdrop-filter: blur(4px);
     }
 
     .carousel-btn:hover {
       background: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 
+                  0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                  0 1px 0 rgba(255, 255, 255, 0.3) inset,
+                  0 0 20px rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
     }
 
     .carousel-indicators {
