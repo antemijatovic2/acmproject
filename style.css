@@ -129,12 +129,25 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
     background: rgba(0,0,0,0.6);
   }
   
+  /* Desktop: donkerdere overlay */
+  @media (min-width: 769px) {
+    .hero .overlay {
+      background: rgba(0,0,0,0.75);
+    }
+  }
+  
   .hero-content {
     position: relative;
     z-index: 1;
     max-width: 700px;
     padding: 20px;
-    padding-top: 380px; 
+  }
+  
+  /* Mobile: push content naar beneden */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding-top: 380px;
+    }
   }
   
   .hero h2 {
@@ -811,18 +824,20 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
 
   /* Verberg contact titel op mobiel */
   @media (max-width: 768px) {
-    /* Zorg dat Over Ons slides geen padding/background/border hebben op mobiel */
+    /* Zorg dat Over Ons slides geen padding/border hebben op mobiel */
     .over-ons-carousel .carousel-slide {
       padding: 0 !important;
-      background: transparent !important;
       border: 0 !important;
+      background: transparent;
+      border-radius: 15px; /* Afgeronde hoeken zoals de container */
+      overflow: hidden; /* Zorg dat foto's binnen de afgeronde hoeken blijven */
     }
 
     .over-ons-carousel .carousel-slide img {
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain; /* Toon volledige foto zonder afsnijden */
     }
     .contact-title {
       display: none;
@@ -1343,7 +1358,8 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
       order: 2;
       flex: none;
       width: 100%;
-      padding: 0 20px; /* padding aan de zijkanten */
+      padding: 0; /* Geen padding zodat foto's volledige breedte vullen */
+      margin: 0 -20px; /* Compenseer voor container padding */
     }
     
     .over-ons-carousel {
@@ -1358,9 +1374,24 @@ html { scroll-behavior: smooth; } /* Behoudt scroll-behavior */
       border-radius: 15px; /* ronde afwerking zoals rest van site */
     }
     
-    /* Grotere hoogte op mobiel voor betere foto weergave */
+    /* Hoogte op mobiel aangepast - gebruik aspect ratio van foto's (bijv. 4:3) */
     .over-ons-carousel .carousel-container::before {
-      padding-top: 70vh; /* gebruik viewport height voor grote foto's op mobiel */
+      padding-top: 75%; /* 4:3 aspect ratio - pas aan naar jouw foto verhouding */
+    }
+    
+    /* Zorg dat de container hoogte past bij de foto's */
+    .over-ons-carousel .carousel-container {
+      height: auto;
+    }
+    
+    .over-ons-carousel .carousel-track {
+      height: 100%;
+    }
+    
+    .over-ons-carousel .carousel-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .over-ons-carousel .carousel-btn {
