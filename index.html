@@ -711,93 +711,106 @@
     // Debug: Log carousel elements
     
 
-    // ====== EMAILJS CONFIGURATIE ======
-    // Vervang deze waarden met jouw EmailJS credentials
-    // Ga naar https://www.emailjs.com/ en maak een gratis account aan
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Vervang met jouw Service ID
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Vervang met jouw Template ID
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Vervang met jouw Public Key
+   // ====== EMAILJS CONFIGURATIE ======
+const EMAILJS_SERVICE_ID = 'service_oj6ba85';
+const EMAILJS_TEMPLATE_ID = 'template_zszp5vh';
+const EMAILJS_PUBLIC_KEY = 'mGxHWh9PuQLwHoGi5';
 
-    // Initialiseer EmailJS
-    if (typeof emailjs !== 'undefined') {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
+// EmailJS initialiseren
+if (typeof emailjs !== 'undefined') {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
+// Contact form functionaliteit
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Verzamel formulier data
+    const formData = new FormData(contactForm);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone') || 'Niet opgegeven',
+      message: formData.get('message'),
+      privacy: formData.get('privacy')
+    };
+
+    // Validatie (subject is verwijderd!)
+    if (!data.name || !data.email || !data.message || !data.privacy) {
+      alert('Vul alle verplichte velden in.');
+      return;
     }
 
-    // Contact form functionaliteit
-    const contactForm = document.getElementById('contactForm');
+    // Email validatie
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      alert('Voer een geldig e-mailadres in.');
+      return;
+    }
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    // Controle of EmailJS correct is ingesteld
+    if (
+      EMAILJS_SERVICE_ID === '' ||
+      EMAILJS_TEMPLATE_ID === '' ||
+      EMAILJS_PUBLIC_KEY === ''
+    ) {
+      console.warn('EmailJS niet correct ingesteld.');
+      alert('Het formulier is nog niet volledig geconfigureerd.');
+      return;
+    }
 
-        // Verzamel formulier data
-        const formData = new FormData(contactForm);
-        const data = {
-          name: formData.get('name'),
-          email: formData.get('email'),
-          phone: formData.get('phone') || 'Niet opgegeven',
-          subject: formData.get('subject'),
-          message: formData.get('message'),
-          privacy: formData.get('privacy')
-        };
+    // Loading state
+    const submitButton = contactForm.querySelector('.btn-submit');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Verzenden...';
+    submitButton.disabled = true;
 
-        // Simpele validatie
-        if (!data.name || !data.email || !data.subject || !data.message || !data.privacy) {
-          alert('Vul alle verplichte velden in.');
-          return;
-        }
-
-        // Email validatie
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-          alert('Voer een geldig e-mailadres in.');
-          return;
-        }
-
-        // Controleer of EmailJS is geconfigureerd
-        if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || 
-            EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
-            EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-          console.warn('EmailJS is nog niet geconfigureerd. Formulier data:', data);
-          alert('Het formulier is nog niet volledig geconfigureerd. Neem contact op met de websitebeheerder.');
-          return;
-        }
-
-        // Toon loading state
-        const submitButton = contactForm.querySelector('.btn-submit');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Verzenden...';
-        submitButton.disabled = true;
-
-        // Verstuur email via EmailJS
-        if (typeof emailjs !== 'undefined') {
-          emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-            from_name: data.name,
-            from_email: data.email,
-            phone: data.phone,
-            subject: data.subject,
-            message: data.message,
-            to_email: 'ac-mario@outlook.com' // Jouw email adres waar berichten naartoe gaan
-          })
-          .then(function(response) {
-            console.log('Email succesvol verzonden!', response.status, response.text);
-            alert('Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.');
+    // Verstuur email via EmailJS
+    if (typeof emailjs !== 'undefined') {
+      emailjs
+        .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone,
+          message: data.message,
+          to_email: 'ac-mario@outlook.com' // ontvanger
+        })
+        .then(
+          function (response) {
+            console.log(
+              'Email succesvol verzonden!',
+              response.status,
+              response.text
+            );
+            alert(
+              'Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.'
+            );
             contactForm.reset();
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-          }, function(error) {
+          },
+          function (error) {
             console.error('Fout bij verzenden email:', error);
-            alert('Er is een fout opgetreden bij het verzenden. Probeer het later opnieuw of neem direct contact op via telefoon of WhatsApp.');
+            alert(
+              'Er is een fout opgetreden bij het verzenden. Probeer het later opnieuw of neem direct contact op via telefoon of WhatsApp.'
+            );
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-          });
-        } else {
-          alert('Email service is niet beschikbaar. Neem contact op via telefoon of WhatsApp.');
-          submitButton.textContent = originalText;
-          submitButton.disabled = false;
-        }
-      });
+          }
+        );
+    } else {
+      alert(
+        'Email service is niet beschikbaar. Neem contact op via telefoon of WhatsApp.'
+      );
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
     }
+  });
+}
+
   </script>
 
 <footer class="footer">
