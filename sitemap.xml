@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.ac-m.be/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Gegevens pagina -->
   <url>
     <loc>https://www.ac-m.be/gegevens.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Privacy pagina -->
   <url>
     <loc>https://www.ac-m.be/privacy.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,7 +31,7 @@
   <!-- Algemene voorwaarden pagina -->
   <url>
     <loc>https://www.ac-m.be/algemene-voorwaarden.html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
